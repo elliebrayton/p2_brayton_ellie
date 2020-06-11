@@ -1,0 +1,200 @@
+/********** COLORS **********
+Primary-Pink: rgb(246, 160, 170)
+Green: rgb(118, 136, 56)
+
+****************************/
+html{
+  font-size: 62.5%; /*** This defines what 1 rem is; How I got this: 10/16.25 and multiplied it by 100 ***/
+  overflow-x: hidden;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  position: relative;
+  background-color: white;
+  padding: 5rem 0;
+}
+
+.logo_title{
+  max-width: 67%;
+  display: block;
+  margin: 0 auto;
+}
+
+.burger {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 100%;
+  z-index: 10;
+  background: transparent;
+}
+
+.hero-img {
+  position: relative;
+  width: 100%;
+}
+
+.hero-img img {
+  display: block;
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  object-position: 50% 30%;;
+}
+
+.hero-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, .5);
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burger span{
+  position: relative;
+  margin-top: .9rem;
+  margin-bottom: .9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -1.5px;
+}
+.burger span, .burger span::before, .burger span::after {
+  display: block;
+  width: 3.2rem;
+  height: .4rem;
+  border-radius: .4rem;
+  background-color: rgb(246, 160, 170);
+  transition-duration: 0.3s;
+}
+.burger span::before, .burger span::after {
+  position: absolute;
+  content: "";
+}
+.burger span::before {
+  top: -9px;
+}
+.burger span::after {
+  top: 9px;
+}
+.burger.clicked span {
+  background-color: transparent;
+}
+.burger.clicked span::before {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.clicked span::after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+.burger.clicked span:before, .burger.clicked span:after {
+  background-color: rgb(246, 160, 170);
+}
+
+.mobile-menu {
+	z-index: 9;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 80px 0;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.mobile-menu.show {
+  transform: translateX(0px);
+}
+.mobile-menu.show ul li.mobile-links {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.mobile-menu ul li.mobile-links {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+.mobile-menu ul li.mobile-links {
+  margin-bottom: 10px;
+  transform: translateX(40px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.mobile-menu ul li.mobile-links:last-of-type {
+  margin-bottom: 0px;
+}
+
+.accordion {
+  background-color: white;
+  color: pink;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 3rem;
+  transition: 0.4s ease;
+  display: inline-block;
+  font-family: source-serif-pro, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.mobile-links a{
+  text-decoration: none;
+  color: rgb(246, 160, 170);
+}
+
+.mobile-links a:hover,
+.mobile-links a:active{
+  text-decoration: none;
+  color: rgb(246, 160, 170);
+  font-style: italic;
+  transition: 2s;
+}
+
+.accordion:hover{
+
+}
+
+.panel {
+  padding: 0 1rem;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+}
+
+.panel a:link,
+.panel a:active,
+.panel a:visited{
+  color: rgb(118, 136, 56);
+  font-size: 2rem;
+  list-style-type: none;
+}
+
+.panel li{
+  list-style-type: none;
+  text-align: center;
+  padding: 2rem 0;
+}
