@@ -1,10 +1,11 @@
 /******** COLOR GUIDE ********
 Primary-Pink: rgb(246, 160, 170)
+Secondary-Pink: rgb(242, 130, 179)
 Green: rgb(118, 136, 56)
 Lavendar: rgb(235, 211, 223)
 Grey: rgb(87, 87, 87)
-
 ****************************/
+
 html{
   font-size: 62.5%; /*** This defines what 1 rem is; How I got this: 10/16.25 and multiplied it by 100 ***/
   overflow-x: hidden;
@@ -16,11 +17,9 @@ html{
   box-sizing: border-box;
 }
 
-.header{
-  position: relative;
-  background-color: white;
-  padding:3.5rem 0 2rem;
-}
+/*************************************************
+                    TYPOGRAPHY
+*************************************************/
 
 h1{
   position: absolute;
@@ -36,11 +35,76 @@ h1{
 
 h2{
   font-family: source-serif-pro;
-  padding-bottom: 3rem;
   color: rgb(87, 87, 87);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+p {
+color: rgb(87, 87, 87);
+font-family: source-serif-pro;
+font-size: 1.6rem;
+line-height: 1.9rem;
+}
+
+.home-page-text h2{
+  padding-bottom: 3rem;
+}
+
+.page h1{
+  display: none;
+}
+
+.page-content h2{
+  color: rgb(246, 160, 170);
+  padding-bottom: 1rem;
+}
+
+.page-content h3{
+  color: rgb(242, 130, 179);
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.page-content h4{
+  color: rgb(118, 136, 56);
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.page-content p{
+  padding-bottom: 2rem;
+}
+
+.explore h2{
+  padding: 2rem 0 0;
+  font-size: 3rem;
+  font-family: source-serif-pro;
+  text-align: center;
+}
+
+.aside h3{
+  color: rgb(118, 136, 56);
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+h1.page {
+  display: none;
+}
+
+
+/*************************************************
+                      HEADER
+*************************************************/
+
+.header{
+  position: relative;
+  background-color: white;
+  padding:3.5rem 0 2rem;
 }
 
 .logo_title{
@@ -49,6 +113,22 @@ h2{
   margin: 0 auto;
 }
 
+.nav {
+  background: #555;
+  text-align: center;
+  display: none;
+}
+
+.social-media-desktop{
+  display: none;
+}
+
+/************ Navigation ************/
+
+/*************************************************
+                  HAMBURGER MENU
+https://codepen.io/hackmans/pen/zbKQoj
+*************************************************/
 .burger {
   width: 5rem;
   height: 5rem;
@@ -59,71 +139,6 @@ h2{
   z-index: 101;
   background: transparent;
 }
-
-.hero-container{
-  position: relative;
-}
-
-.hero-button{
-  position: absolute;
-  z-index: 11;
-  top: 70%;
-  left: 0;
-  width: 100%;
-  background: transparent;
-  text-align: center;
-}
-
-
-
-.hero-button a:link,
-.hero-button a:visited{
-  display: inline-block;
-  background: white;
-  width: 9rem;
-  margin: 0 2rem;
-  padding: 1rem;
-  border-radius: .3rem;
-  text-decoration: none;
-  color: rgb(246, 160, 170);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.hero-img {
-  position: relative;
-  width: 100%;
-}
-
-.hero-img img {
-  display: block;
-  width: 100%;
-  height: 25rem;
-  object-fit: cover;
-}
-
-.hero-img::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  background: rgba(235, 211, 223, 0.4);
-}
-
-.explore h2{
-  padding: 2rem 0 0;
-  font-size: 3rem;
-  font-family: source-serif-pro;
-  text-align: center;
-}
-
-/*************************************************
-                  HAMBURGER MENU
-https://codepen.io/hackmans/pen/zbKQoj
-*************************************************/
 
 .burger:hover {
   cursor: pointer;
@@ -268,6 +283,156 @@ https://www.w3schools.com/howto/howto_js_accordion.asp
   display: none;
 }
 
+/*************************************************
+                      MAIN
+*************************************************/
+/************ Hero-Banner ************/
+
+.hero-container{
+  position: relative;
+}
+
+.hero-button{
+  position: absolute;
+  z-index: 11;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+}
+
+.hero-button a:link,
+.hero-button a:visited{
+  display: inline-block;
+  background: white;
+  width: 9rem;
+  margin: 0 2rem;
+  padding: 1rem;
+  border-radius: .3rem;
+  text-decoration: none;
+  color: rgb(246, 160, 170);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hero-img {
+  position: relative;
+  width: 100%;
+}
+
+.hero-img img {
+  display: block;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.hero-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(235, 211, 223, 0.4);
+}
+
+.hero-img img {
+  object-position: 50% 70%;
+}
+
+.sunflower img {
+  object-position: 50% 0%;
+}
+
+/************ Article ************/
+
+.page-content section{
+  padding-bottom:3rem;
+}
+
+
+.page-content img{
+  display: block;
+  float: none;
+  max-width: 100%;
+  padding-right: 0;
+}
+
+.page-content{
+  max-width: 90%;
+  margin: auto;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-statement :nth-child(1) { order: 1; }
+.mission-statement :nth-child(2) { order: 5; }
+.mission-statement :nth-child(3) { order: 2; }
+.mission-statement :nth-child(4) { order: 3; }
+.mission-statement :nth-child(5) { order: 4; }
+
+/************ Figure ************/
+
+.page-content figure{
+  max-width: 95%;
+  margin: auto;
+}
+
+.page-content figure img{
+  margin: auto;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.page-content figure img,
+.page-content figure figcaption{
+  margin: auto;
+  text-align: center;
+
+}
+
+.page-content figure figcaption{
+ color: rgb(242, 130, 179);
+ font-family: source-serif-pro;
+ font-size: 1.3rem;
+ font-style: italic;
+}
+
+/************ Aside ************/
+
+.aside{
+  background: rgb(235, 211, 223);
+  padding: 3rem;
+  color: rgb(87, 87, 87);
+}
+
+.aside a:link,
+.aside a:visited,
+.aside a:active {
+  color: rgb(87, 87, 87);
+  text-decoration: none;
+}
+
+.aside ul{
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.category {
+    list-style-type: none;
+}
+
+.studies{
+  list-style-type: decimal;
+}
+
+/************ Landing-Page ************/
 
 .row {
   margin: 0 auto;
@@ -319,6 +484,10 @@ padding: 3rem 0 8rem;
   padding-bottom: 1.5rem;
 }
 
+/*************************************************
+                      FOOTER
+*************************************************/
+
 .footer{
   padding: 2rem;
   border-top: 1px solid rgb(235, 211, 223);
@@ -334,16 +503,6 @@ padding: 3rem 0 8rem;
 .footer-links li{
   display: inline;
   padding: 2rem;
-}
-
-.nav {
-  background: #555;
-  text-align: center;
-  display: none;
-}
-
-.social-media-desktop{
-  display: none;
 }
 
 /*************************************************
@@ -379,6 +538,11 @@ padding: 3rem 0 8rem;
     padding: 3rem 3rem;
   }
 
+  .page-content figure img{
+    width: 90%;
+    padding-bottom: 5%;
+  }
+
 }
 /******* END 370PX MIN-WIDTH MEDIA QUERY *******/
 
@@ -387,7 +551,7 @@ padding: 3rem 0 8rem;
 @media (min-width: 500px) {
 
   h1{
-    font-size: 3.5rem;
+    font-size: 4rem;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -431,6 +595,10 @@ padding: 3rem 0 8rem;
 
 @media (min-width: 750px) {
 
+  html{
+    font-size: 67%;
+  }
+
   .hero-img img {
     display: block;
     width: 100%;
@@ -469,8 +637,6 @@ padding: 3rem 0 8rem;
       max-width: 45%;
     }
 
-
-
     /*************************************************
                       DROPDOWN MENU
     https://codepen.io/nevaljawko/pen/LzYQQv
@@ -502,6 +668,7 @@ padding: 3rem 0 8rem;
 
     .nav ul li + li {
       margin-left: 1px;
+
     }
 
     .nav ul li a {
@@ -509,7 +676,7 @@ padding: 3rem 0 8rem;
       display: inline-block;
       color: rgb(87, 87, 87);
       text-decoration: none;
-      padding: 2rem 2.5rem 1rem;
+      padding: 2rem 2rem 1rem;
       -webkit-transition: all 0.1s ease-in;
       -o-transition: all 0.1s ease-in;
       transition: all 0.1s ease-in;
@@ -537,6 +704,7 @@ padding: 3rem 0 8rem;
     .nav ul li > ul li a {
       display: block;
       z-index: 99;
+      padding: 1rem 1.5rem;
     }
 
     .nav ul li > ul li a:hover {
@@ -569,14 +737,39 @@ padding: 3rem 0 8rem;
 
   .col-1-of-2 {
     width: calc((100%) / 2); }
+
+    .page-content{
+      max-width: 90%;
+      padding: 5% 0;
+    }
+
+    .page-content figure{
+      width: 50%;
+      float: right;
+      padding-left: 3rem;
+    }
+
+    .page-content{
+      display: block;
+    }
+
+    .page-content figure img,
+    .page-content figure figcaption{
+      margin: auto;
+      text-align: center;
+    }
   }
 
 /******* END 750PX MIN-WIDTH MEDIA QUERY *******/
 
-/****** START 1300PX MIN-WIDTH MEDIA QUERY ******/
+/****** START 1050PX MIN-WIDTH MEDIA QUERY ******/
 
-@media (min-width: 1300px) {
+@media (min-width: 1050px) {
 
+  .page-content{
+    max-width: 80%;
+    padding: 5% 0;
+  }
   .icon-container{
     width: 60%;
     justify-content: space-around;
@@ -584,8 +777,12 @@ padding: 3rem 0 8rem;
 
   .img-icon{
     max-width: 65%;
+
   }
-  }
+
+  .page-content h2{
+  padding-bottom: 2rem;
+}
 
   .site {
     display: flex;
@@ -596,7 +793,47 @@ padding: 3rem 0 8rem;
   .site-content {
     flex: 1;
   }
-/******* END 1300PX MIN-WIDTH MEDIA QUERY *******/
+
+}
+/******* END 1050PX MIN-WIDTH MEDIA QUERY *******/
+
+/****** START 1375PX MIN-WIDTH MEDIA QUERY ******/
+
+@media (min-width: 1375px) {
+
+  html{
+    font-size: 72%;
+  }
+
+  .icon-container{
+    width: 60%;
+    justify-content: space-around;
+  }
+
+  .img-icon{
+    max-width: 65%;
+
+  }
+
+  .page-content{
+    max-width: 75%;
+    padding-bottom: 10%;
+  }
+
+  .page-content figure{
+    width: 40%;
+  }
+  .site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .site-content {
+    flex: 1;
+  }
+}
+/******* END 1375PX MIN-WIDTH MEDIA QUERY *******/
 
 /****** START 700PX MAX-WIDTH MEDIA QUERY ******/
 
