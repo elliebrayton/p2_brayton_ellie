@@ -21,6 +21,67 @@ body{
   font-family: source-serif-pro ,'times';
 }
 
+.our-project .container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+}
+
+.container ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0 !important;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.container ul li{
+  display: inline-block;
+  border: 2px solid rgb(118, 136, 56);
+  background: white;
+  width: 42%;
+  margin: 3% 0;
+  padding: .5rem;
+  border-radius: .3rem;
+  text-decoration: none;
+  color: rgb(118, 136, 56);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: .1rem;
+  font-family: source-serif-pro;
+}
+
+.container ul li.selected{
+  background-color:rgb(118, 136, 56);
+  color: white;
+}
+
+
+.photoset{
+display: flex;
+flex-flow: wrap;
+}
+.photoset_item{
+  padding: 14px;
+  flex: 1 100%;
+  height: auto;
+  justify-content: center;
+  background: whiteYe;
+  margin: 5px;
+}
+
+.photoset_item img{
+
+}
+
+.photoset h4{
+  padding-top:10%;
+}
 /*************************************************
                     TYPOGRAPHY
 *************************************************/
@@ -50,6 +111,15 @@ color: rgb(87, 87, 87);
 font-family: source-serif-pro;
 font-size: 1.6rem;
 line-height: 1.9rem;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.italic{
+  font-style: italic;
+  color: rgb(118, 136, 56)
 }
 
 .home-page-text h2{
@@ -96,9 +166,6 @@ line-height: 1.9rem;
   font-size: 2rem;
 }
 
-h1.page {
-  display: none;
-}
 
 
 /*************************************************
@@ -348,6 +415,14 @@ https://www.w3schools.com/howto/howto_js_accordion.asp
   display: flex;
   flex-direction: column;
 }
+.page-content section ul{
+  color: rgb(87, 87, 87);
+  font-family: source-serif-pro;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding-left: 2rem;
+  list-style-type: numeral;
+}
 
 .mission-statement :nth-child(1) { order: 1; }
 .mission-statement :nth-child(2) { order: 5; }
@@ -383,12 +458,26 @@ https://www.w3schools.com/howto/howto_js_accordion.asp
  font-style: italic;
 }
 
+.information{
+  display: flex;
+  flex-direction: column;
+  border-bottom: rgb(235, 211, 223) solid 1px;
+  margin-bottom: 3.5rem;
+}
+
+.information .photo--left,
+.information .photo--right{
+  width: 100%;
+  padding-bottom: 5%;
+}
+
 /************ Aside ************/
 
 .aside{
   background: rgb(235, 211, 223);
   padding: 3rem;
   color: rgb(87, 87, 87);
+  border-radius: 3px;
 }
 
 .aside a:link,
@@ -459,21 +548,35 @@ https://www.w3schools.com/howto/howto_js_accordion.asp
   text-decoration: none;
   color: rgb(246, 160, 170);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .hero-button .button--one:hover,
 .hero-button .button--two:hover,
 .icon-button a:hover{
-  transform: scale(1.05) translateY(-5px);
-  transition: .3s;
+  font-family: source-serif-pro;
+  transform: scale(1.1) translateY(-5px);
+  transition: all .3s;
 }
+.gallery {
+  margin: 0 50px;
+  text-align: center;
+}
+.gallery img {
+  margin: 10px;
+}
+.gallery img.mix {
+  display: none;
+}
+
+
 
 .hero-button .button--one:active,
 .hero-button .button--two:active,
 .icon-button a:active{
+  -webkit-transform: scale(1) translateY(.2px);
   transform: scale(1) translateY(.2px);
-  transition: .3s;
+  transition: all .3s;
 }
 
 .icon-container{
@@ -494,9 +597,39 @@ padding: 3rem 0 8rem;
   border-radius: .3rem;
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 500;
   text-align: center;
+  letter-spacing: .1rem;
+  font-family: source-serif-pro;
+}
+
+.button--learn_more:link,
+.button--learn_more:visited{
+  display: inline-block;
+  background: rgb(246, 160, 170);
+  width: 13rem;
+  margin: 0 auto;
+  padding: .7rem;
+  border-radius: .3rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: source-serif-pro;
+}
+
+.button--learn_more:hover{
+  font-family: source-serif-pro;
+  transform: translateY(-5px);
+  transition: all .3s;
+}
+
+.button--learn_more:active{
+  -webkit-transform: translateY(.2px);
+  transform: translateY(.2px);
+  transition: all .3s;
 }
 
 .img-icon{
@@ -610,8 +743,61 @@ padding: 3rem 0 8rem;
     padding-bottom: 0rem;
   }
 
+  .col-1-of-3 {
+    width: calc((100% - 2*3.5rem) / 3); }
+
+  .col-2-of-3 {
+    width: calc(2  * ((100% - 2* 3.5rem) / 3) + 3.5rem); }
+
 }
 /******* END 500PX MIN-WIDTH MEDIA QUERY *******/
+
+@media (min-width: 550px){
+  .container ul{
+    justify-content: flex-start;
+
+  }
+
+  .container ul li{
+    display: inline-block;
+    border: 2px solid rgb(118, 136, 56);
+    background: white;
+    width: 11rem;
+    margin: 3% 1%;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-decoration: none;
+    color: rgb(118, 136, 56);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: .1rem;
+    font-family: source-serif-pro;
+  }
+
+  .container ul li.selected{
+    background-color:rgb(118, 136, 56);
+    color: white;
+  }
+
+  .photoset{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+  .photoset_item{
+    max-width: 50%;
+    flex: 1 45%;
+    height: auto;
+    justify-content: center;
+    background: white;
+    margin: 1%;
+  }
+
+  .container ul {
+    justify-content: center;
+}
+}
 
 /****** START 750PX MIN-WIDTH MEDIA QUERY ******/
 
@@ -780,6 +966,18 @@ padding: 3rem 0 8rem;
       margin: auto;
       text-align: center;
     }
+
+    .information {
+      display: block;
+    }
+
+    .information .photo--left{
+      padding: 2% 10% 10% 0;
+    }
+
+    .information .photo--right{
+      padding: 2% 0 10% 10%;
+    }
   }
 
 /******* END 750PX MIN-WIDTH MEDIA QUERY *******/
@@ -803,7 +1001,7 @@ padding: 3rem 0 8rem;
   }
 
   .page-content h2{
-  padding-bottom: 2rem;
+    display: none;
 }
 
   .site {
@@ -814,6 +1012,18 @@ padding: 3rem 0 8rem;
 
   .site-content {
     flex: 1;
+  }
+
+
+  .photoset{
+    justify-content: flex-start;
+  }
+
+  .photoset_item{
+    max-width: 31.33333%;
+    flex: 1 45%;
+    height: auto;
+    margin: 1%;
   }
 
 }
@@ -838,7 +1048,7 @@ padding: 3rem 0 8rem;
   }
 
   .page-content{
-    max-width: 75%;
+    max-width: 70%;
     padding-bottom: 10%;
   }
 
@@ -863,6 +1073,14 @@ padding: 3rem 0 8rem;
   .right-col{
     display: none;
   }
+  .row [class^="col-"]{
+    width: 100%;
+  }
+
+  .information .photo--right,
+  .information .photo--left{
+    display: none;
+  }
 }
 /******* END 700PX MAX-WIDTH MEDIA QUERY *******/
 
@@ -871,6 +1089,23 @@ padding: 3rem 0 8rem;
 @media (max-width: 500px) {
   h1{
     max-width: 50rem;
+  }
+
+  .container ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0 !important;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 599px) {
+  h1{
+    max-width: 50rem;
+  }
+
+  .container ul{
+    justify-content: space-between;
   }
 }
 /******* END 700PX MAX-WIDTH MEDIA QUERY *******/
