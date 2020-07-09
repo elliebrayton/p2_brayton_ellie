@@ -58,7 +58,7 @@
 			<!-- NAVIGATION FOR DESKTOP-->
 			<nav class="nav">
 			 <ul class="navigation">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="/">Home</a></li>
 			 <li><a href="javascript:void(0);">About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 				   <ul>
 						<li><a href="mission-statement.html">Mission Statement</a></li>
@@ -83,26 +83,49 @@
 		<main class="site-content">
 			<!-- START HERO-BANNER -->
 			<div class="hero-container">
-				<h1 class="page">Mission Statement</h1>
+				<h1 class="page">Contact Us</h1>
 				<div class="hero-img sunflower">
 					<img src="images/sunflower.png" alt="brownies">
 				</div>
 			</div>
 			<!-- END HERO-BANNER -->
 				<!-- START ARTICLE -->
-				<article class="page-content mission-statement">
-					<h2>Mission Statement</h2>
-						<!-- START FIGURE-->
-						<figure>
-							<img src="images/courtney&hunter.png" alt="courtney&hunter">
-								<figcaption>Owners: Courtney & Hunter</figcaption>
-						</figure>
-						<!-- END FIGURE-->
-						<p> Sungrown Bakery was founded with you in mind. We understand that life can be hard, stressful, and overwhelming. We wanted a way for people to escape from reality, if only for a few moments, by eating a sweet and delicious treat. We only want the best for our community so we decided to use clean wholesome ingredients. These ingredients do not include any animal by-product and cause no harm to our beautiful home- planet Earth. We believe in transparency, which is why we list every ingredient that goes into the goods we bake. We understand you care about your health just as much as we do.</p>
-						<p>We know some days are worse than others, and for that, we’ve implemented a line of desserts infused with cannabidiol, also known as, CBD. This lovely ingredient has been shown to decrease anxiety, depression, and insomnia. We felt like we had an obligation to include this in our desserts so that our community's happiness could grow.</p>
-						<p>Sungrown Bakery hopes to create a positive impact on society through education, communication, and delicious baked desserts.</p>
-					</article>
-					<!-- END ARTICLE -->
+				<article class="page-content">
+          <h2>Contact Form</h2>
+          <section class="section--contact">
+            <div class="contact_wrapper--text">
+              <h3>Can’t find what you’re looking for on our website? Send us a message!</h3>
+	              <p>We’re here to answer all the questions we can about our bakery, CBD, veganism, and more. </p>
+	              <p>If you just want to chat, that’s cool too. We love talking to people. Courtney never stops talking in fact (but don’t tell her I said that). </p>
+	              <p>This is also a rad place to leave comments, good or bad, and if you have any concerns please reach out.</p>
+	              <p>We’ll answer messages as soon as humanly possible. Have a sunny day!</p>
+            </div>
+						<div class="contact_wrapper--form">
+							<h4>Sorry, something went wrong with your submission. Please try again!</h4>
+							<form id="test_form" class="form" name="form" method="" action="form.php" onsubmit="return validateForm(this)">
+									<label for="first-name">First Name: </label>
+									<input type="text" class="field field1" placeholder="First Name" name="first-name" id="first-name">
+
+									<label for="last-name">Last Name: </label>
+									<input type="text" class="field field2" placeholder="Last Name" name="last-name" id="last-name">
+
+									<label for="e-mail">E-Mail Address: </label>
+									<input type="text" class="field field3" placeholder="E-mail" name="e-mail" id="e-mail">
+
+									<label for="e-mail">Subject: </label>
+									<input type="text" class="field field4" placeholder="Subject" name="subject" id="subject">
+
+									<label for="lottery">Message:</label>
+									<textarea class="textarea" rows="5" cols="20" placeholder="Type your message here!" name="lottery" id="lottery"></textarea>
+
+									<button class="button" type="submit">
+											Send Message
+									</button>
+							</form>
+						</div>
+</section>
+				</article>
+				<!-- END ARTICLE -->
 		</main>
 		<!-- END MAIN -->
 		<!-- START FOOTER -->

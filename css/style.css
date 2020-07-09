@@ -52,6 +52,16 @@ font-size: 1.6rem;
 line-height: 1.9rem;
 }
 
+a:link, a:visited{
+  color: rgb(242, 130, 179);
+text-decoration: none;
+}
+
+a:hover{
+  color: white;
+  transition: all .2s;
+}
+
 .bold{
   font-weight: bold;
 }
@@ -548,10 +558,10 @@ padding: 3rem 0 8rem;
 
 .button--learn_more:link,
 .button--learn_more:visited{
-  display: inline-block;
+  display: block;
   background: rgb(246, 160, 170);
   width: 13rem;
-  margin: 0 auto;
+  margin: 5% auto 0;
   padding: .7rem;
   border-radius: .3rem;
   text-decoration: none;
@@ -562,13 +572,32 @@ padding: 3rem 0 8rem;
   font-family: source-serif-pro;
 }
 
-.button--learn_more:hover{
+.button{
+  display: inline-block;
+  background: rgb(246, 160, 170);
+  width: 13rem;
+  margin: 3% auto;
+  padding: 2% 0;
+  border-radius: .3rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: source-serif-pro;
+  border: none;
+  color: #FFF;
+}
+
+.button--learn_more:hover,
+.button:hover{
   font-family: source-serif-pro;
   transform: translateY(-5px);
   transition: all .3s;
 }
 
-.button--learn_more:active{
+.button--learn_more:active,
+.button:active{
   -webkit-transform: translateY(.2px);
   transform: translateY(.2px);
   transition: all .3s;
@@ -638,6 +667,10 @@ https://www.youtube.com/watch?v=zlnlY6YZe74&t=180s
   font-family: source-serif-pro;
 }
 
+.container ul li:hover{
+  cursor: pointer;
+}
+
 .container ul li.selected{
   background-color:rgb(118, 136, 56);
   color: white;
@@ -659,6 +692,11 @@ flex-flow: wrap;
 .photoset h4{
   padding-top:10%;
 }
+
+/*************************************************
+                  FAQ ACCORDION
+https://jsfiddle.net/nikdtu/3amzhp6z/
+*************************************************/
 
 
 .accordion_container {
@@ -685,6 +723,47 @@ flex-flow: wrap;
 
 .plusminus {
   float: right;
+}
+
+.section--contact{
+  display: flex;
+  flex-flow: column;
+}
+
+.contact_wrapper--text{
+  flex: 1 0 55%;
+  padding-right: 5%;
+}
+
+/*************************************************
+                  CONTACT FORM
+*************************************************/
+
+label {
+	position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+form {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 2rem;
+}
+.field, .textarea {
+  margin: 0 .5em 1em 0;
+  padding: .5em 1em;
+  border: 1px solid rgb(235, 211, 223);
+  font-size: 1.2rem;
+  font-family: source-serif-pro;
+  font-style: italic;
+}
+.field {
+	flex: 1 0 40%;
+  width: 40%;
+	float: left;
+}
+.field3, .field4, .textarea {
+	flex: 1 0 95%;
 }
 
 /*************************************************
@@ -984,7 +1063,7 @@ flex-flow: wrap;
       padding-left: 3rem;
     }
 
-    .page-content{
+    .mission-statement{
       display: block;
     }
 
@@ -1004,6 +1083,14 @@ flex-flow: wrap;
 
     .information .photo--right{
       padding: 2% 0 10% 10%;
+    }
+    .section--contact{
+      display: flex;
+      flex-flow: row;
+    }
+
+    .button{
+      padding: 1% 0;
     }
   }
 
@@ -1111,6 +1198,15 @@ flex-flow: wrap;
 }
 /******* END 700PX MAX-WIDTH MEDIA QUERY *******/
 
+/****** START 599PX MAX-WIDTH MEDIA QUERY ******/
+
+@media (max-width: 599px) {
+  h1{
+    max-width: 50rem;
+  }
+}
+/****** END 599PX MAX-WIDTH MEDIA QUERY ******/
+
 /****** START 500PX MAX-WIDTH MEDIA QUERY ******/
 
 @media (max-width: 500px) {
@@ -1125,14 +1221,12 @@ flex-flow: wrap;
     justify-content: space-between;
   }
 }
+/******* START 600PX MIN-WIDTH AND 900PX MAX-WIDTH MEDIA QUERY *******/
 
-@media (max-width: 599px) {
-  h1{
-    max-width: 50rem;
-  }
-
-  .container ul{
-    justify-content: space-between;
-  }
+@media (min-width: 600px)and (max-width: 900px){
+  .container ul {
+    width: 50rem;
+    margin: 0 auto;
 }
-/******* END 700PX MAX-WIDTH MEDIA QUERY *******/
+}
+/******* END 600PX MIN-WIDTH AND 900PX MAX-WIDTH MEDIA QUERY *******/
