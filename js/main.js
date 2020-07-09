@@ -22,6 +22,24 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+//FAQ Accordion: https://jsfiddle.net/nikdtu/3amzhp6z/
+$(document).ready(function() {
+  //toggle the component with class accordion_body
+  $(".accordion_head").click(function() {
+    if ($('.accordion_body').is(':visible')) {
+      $(".accordion_body").slideUp(300);
+      $(".plusminus").text('+');
+    }
+    if ($(this).next(".accordion_body").is(':visible')) {
+      $(this).next(".accordion_body").slideUp(300);
+      $(this).children(".plusminus").text('+');
+    } else {
+      $(this).next(".accordion_body").slideDown(300);
+      $(this).children(".plusminus").text('-');
+    }
+  });
+});
+
 //Dropdown
 $(".navigation li").hover(function() {
   var isHovered = $(this).is(":hover");
